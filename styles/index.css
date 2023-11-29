@@ -1,15 +1,11 @@
 @import url(base.css);
 
-.main {
-  padding: 150px;
-}
-
-.main__heading {
+.home .main__heading {
   font-size: 128px;
   font-weight: bold;
 }
 
-.main__sub-heading {
+.home .main__sub-heading {
   font-size: 40px;
 }
 
@@ -21,4 +17,29 @@
 .button--secondary {
   background-color: var(--color-button-secondary-bg);
   color: var(--color-button-secondary-text);
+}
+
+.home .menu path {
+  fill: var(--color-text-on-primary);
+}
+
+@media (max-width: 840px) {
+  .nav--visible {
+    background-color: var(--color-primary);
+  }
+}
+
+@media (max-width: 1220px) {
+  .home .main__heading {
+    font-size: 70px;
+  }
+}
+
+@media (max-width: 590px) {
+  .home .main__heading {
+    font-size: 40px;
+  }
+  .home .main__sub-heading {
+    font-size: 24px;
+  }
 }

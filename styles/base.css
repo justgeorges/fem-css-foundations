@@ -2,7 +2,9 @@
 
 :root {
   --color-primary: #ff7b54;
+  --color-secondary: #fff;
   --color-text-on-primary: #fff;
+  --color-text-on-secondary: #000;
   --color-button-border: var(--color-text-on-primary);
 
   --color-button-primary-bg: var(--color-text-on-primary);
@@ -19,9 +21,21 @@
 }
 
 body {
+  font-family: var(--font-family);
+}
+
+.body--primary {
   background-color: var(--color-primary);
   color: var(--color-text-on-primary);
-  font-family: var(--font-family);
+}
+
+.body--secondary {
+  background-color: var(--color-text-on-primary);
+  color: var(--color-primary);
+}
+
+.main {
+  padding: 150px;
 }
 
 a {
@@ -29,6 +43,7 @@ a {
   text-decoration: inherit;
 }
 
+h2,
 p {
   margin: 0;
 }
@@ -91,4 +106,100 @@ header img {
 
 .button__icon {
   vertical-align: middle;
+}
+
+.menu {
+  display: none;
+}
+
+.close {
+  display: none;
+}
+
+.menu,
+.close {
+  cursor: pointer;
+}
+
+.home .close path {
+  fill: var(--color-text-on-primary);
+}
+
+@media (max-width: 1220px) {
+  .button {
+    font-size: 24px;
+    padding: 0 32px;
+    height: 70px;
+  }
+
+  .button img {
+    width: 20px;
+  }
+}
+
+@media (max-width: 840px) {
+  .body.no--scroll {
+    overflow: hidden;
+  }
+  .menu {
+    display: block;
+  }
+
+  .menu--hide {
+    display: none;
+  }
+
+  .close--show {
+    display: block;
+  }
+
+  .nav {
+    position: absolute;
+    height: 100vh;
+    width: 100vw;
+    top: 60px;
+    left: -100%;
+    padding-top: 60px;
+    transition: left 0.2s linear;
+  }
+
+  .nav--visible {
+    left: 0;
+    max-width: 100%;
+    max-height: 100%;
+  }
+
+  .nav__list {
+    flex-direction: column;
+    justify-content: space-around;
+    height: 80%;
+  }
+
+  .nav__list-item {
+    font-size: 60px;
+    font-weight: bold;
+  }
+
+  .header {
+    grid-template-columns: 33px 1fr 34px;
+    justify-items: center;
+  }
+}
+
+@media (max-width: 815px) {
+  .main {
+    padding: 75px;
+  }
+}
+
+@media (max-width: 700px) {
+  .button {
+    font-size: 16px;
+    margin-top: 24px;
+  }
+
+  .button-container {
+    margin-top: 32px;
+    flex-wrap: wrap;
+  }
 }
