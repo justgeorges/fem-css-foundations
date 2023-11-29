@@ -1,1 +1,28 @@
 @import url(base.css);
+
+.main {
+  padding: 150px;
+}
+
+.main__heading {
+  font-size: 128px;
+  font-weight: bold;
+}
+
+.main__sub-heading {
+  font-size: 40px;
+}
+
+.button--primary {
+  background-color: var(--color-button-primary-bg);
+  color: var(--color-button-primary-text);
+}
+
+.button--secondary {
+  background-color: var(--color-button-secondary-bg);
+  color: var(--color-button-secondary-text);
+}
+
+.button__container {
+  display: flex;
+}
